@@ -1,0 +1,1 @@
+require 'cocoapods-clean_build_phases_scripts/gem_version'
