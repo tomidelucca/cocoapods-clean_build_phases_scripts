@@ -26,6 +26,8 @@ module Pod
           @xcodeproj_path = Dir.glob("**/*.xcodeproj").first
         end
 
+        puts "RUNNING in #@xcodeproj_path"
+
         help! 'A xcodeproj file could not found.' unless @xcodeproj_path
 
         xcode_project = Xcodeproj::Project.open(@xcodeproj_path)
