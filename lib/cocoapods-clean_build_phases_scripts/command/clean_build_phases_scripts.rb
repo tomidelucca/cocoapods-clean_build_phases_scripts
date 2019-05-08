@@ -23,7 +23,7 @@ module Pod
 
       def run
         if !@xcodeproj_path 
-          @xcodeproj_path = Dir.glob("**/*.xcodeproj").first
+          @xcodeproj_path = Dir.glob("*.xcodeproj").first
         end
 
         puts "RUNNING in #@xcodeproj_path"
