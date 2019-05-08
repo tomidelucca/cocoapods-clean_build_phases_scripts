@@ -32,12 +32,12 @@ module Pod
 
         xcode_project = Xcodeproj::Project.open(@xcodeproj_path)
 
-        puts "XCODEPROJ: '#{xcode_project}'"
+        puts "XCODEPROJ: #{xcode_project}"
 
-        puts "TARGETS: '#{xcode_project.targets}'"
+        puts "TARGETS: #{xcode_project.targets}"
 
         xcode_project.targets.each do |target|
-          puts "TARGET: '#{target}'"
+          puts "TARGET: #{target}"
           phase_name = '[CP] Copy Pods Resources'
           target.shell_script_build_phases.select { |phase| phase.name && phase.name.end_with?(phase_name) }.each do |phase|
                 puts "Removing input/output paths from script '#{phase.name}' in target '#{target.name}'"
